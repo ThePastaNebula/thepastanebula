@@ -21,11 +21,16 @@
     scrollbar-color: var(--color-accent-1) transparent;
 }
 
+html {
+    background: var(--color-background-1);
+}
+
 ::selection {
     background: oklch(from var(--color-accent-1) l c h / .33);
 }
 
 body {
+    position: relative;
     background: var(--color-background-1);
     min-height: 100dvh;
     color: var(--color-text-1);
@@ -60,28 +65,34 @@ body {
 
     &::before {
         content: "";
-        position: fixed;
+        position: absolute;
         inset: 0;
         z-index: -1;
         pointer-events: none;
         opacity: .6;
         background:
-            radial-gradient(.078vw .078vw at 1.04vw 1.56vw, white, transparent),
-            radial-gradient(.052vw .052vw at 4.69vw 6.25vw, oklch(90% .05 250), transparent),
-            radial-gradient(.104vw .104vw at 7.81vw 3.13vw, white, transparent),
-            radial-gradient(.052vw .052vw at 3.13vw 8.85vw, oklch(95% .05 80), transparent),
-            radial-gradient(.052vw .052vw at 2.08vw 3.65vw, white, transparent),
-            radial-gradient(.104vw .104vw at 10.42vw 7.81vw, oklch(92% .06 20), transparent),
-            radial-gradient(.078vw .078vw at 6.25vw 11.46vw, white, transparent),
-            radial-gradient(.052vw .052vw at 13.54vw 2.08vw, oklch(90% .05 250), transparent);
+            radial-gradient(.094rem .094rem at 1.25rem 1.875rem, white, transparent),
+            radial-gradient(.0625rem .0625rem at 5.625rem 7.5rem, oklch(90% .05 250), transparent),
+            radial-gradient(.125rem .125rem at 9.375rem 3.75rem, white, transparent),
+            radial-gradient(.0625rem .0625rem at 3.75rem 10.625rem, oklch(95% .05 80), transparent),
+            radial-gradient(.0625rem .0625rem at 2.5rem 4.375rem, white, transparent),
+            radial-gradient(.125rem .125rem at 12.5rem 9.375rem, oklch(92% .06 20), transparent),
+            radial-gradient(.094rem .094rem at 7.5rem 13.75rem, white, transparent),
+            radial-gradient(.0625rem .0625rem at 16.25rem 2.5rem, oklch(90% .05 250), transparent);
         background-size:
-            9.375vw 9.375vw, 9.375vw 9.375vw, 9.375vw 9.375vw, 9.375vw 9.375vw,
-            15.1vw 14.06vw, 15.1vw 14.06vw, 15.1vw 14.06vw, 15.1vw 14.06vw;
+            11.25rem 11.25rem,
+            11.25rem 11.25rem,
+            11.25rem 11.25rem,
+            11.25rem 11.25rem,
+            18.125rem 16.875rem,
+            18.125rem 16.875rem,
+            18.125rem 16.875rem,
+            18.125rem 16.875rem;
     }
 
     &::after {
         content: "";
-        position: fixed;
+        position: absolute;
         inset: -20%;
         z-index: -2;
         pointer-events: none;
