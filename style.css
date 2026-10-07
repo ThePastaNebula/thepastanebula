@@ -13,7 +13,7 @@
     --color-text-1: oklch(from var(--color-background-1) 72% c h);
     --color-text-2: oklch(from var(--color-background-1) 98% c h);
     --color-accent-1: oklch(62% 0.22 19);
-    --wrapper-width: 80rem;
+    --wrapper-width: 96rem;
     --gap: 1.25rem;
     --border-radius: calc(var(--gap) * .5);
     --inner-radius: calc(var(--border-radius) * .6);
