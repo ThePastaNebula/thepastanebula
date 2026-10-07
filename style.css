@@ -156,6 +156,14 @@ header {
             transparent
         );
     }
+
+    @media (width <= 36rem) {
+        justify-content: space-between;
+
+        & hr {
+            display: none;
+        }
+    }
 }
 
 .card {
